@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Private Notes for Jira - Documentation</title>
+    <meta name="description"
+        content="Official documentation for My Private Notes for Jira - A secure, private notepad for every Jira issue.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #172B4D;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: #0052CC;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            color: #6b778c;
+            font-size: 1.2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+        }
+
+        h2 {
+            color: #0052CC;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ebecf0;
+        }
+
+        h3 {
+            color: #172B4D;
+            margin: 20px 0 10px;
+        }
+
+        ol,
+        ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #dfe1e6;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f5f7;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #fafbfc;
+        }
+
+        a {
+            color: #0052CC;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #0052CC;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: #0747A6;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            padding: 8px 16px;
+            background: #f4f5f7;
+            border-radius: 6px;
+        }
+
+        .nav-links a:hover {
+            background: #ebecf0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #6b778c;
+            border-top: 1px solid #ebecf0;
+            margin-top: 50px;
+        }
+
+        .highlight {
+            background: #DEEBFF;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #0052CC;
+        }
+
+        code {
+            background: #f4f5f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "SF Mono", Monaco, monospace;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🔒</div>
+            <h1>My Private Notes for Jira</h1>
+            <p class="tagline">Your secure, personal notepad for every Jira issue</p>
+            <div class="nav-links">
+                <a href="#overview">Overview</a>
+                <a href="#installation">Installation</a>
+                <a href="#usage">Usage</a>
+                <a href="#features">Features</a>
+                <a href="#faq">FAQ</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="security.html">Security</a>
+            </div>
+        </header>
+
+        <div class="card" id="overview">
+            <h2>Overview</h2>
+            <p>My Private Notes is a Jira Cloud app that provides a secure, personal scratchpad for every issue. Your
+                notes are completely private and visible only to you—<strong>not even Jira administrators can access
+                    them</strong>.</p>
+            <div class="highlight" style="margin-top: 20px;">
+                <strong>Key Benefit:</strong> Keep personal reminders, draft comments, or sensitive notes directly on
+                any Jira issue without worrying about others seeing them.
+            </div>
+        </div>
+
+        <div class="card" id="installation">
+            <h2>Installation</h2>
+            <ol>
+                <li>Visit the <a href="https://marketplace.atlassian.com/apps/2739337819" target="_blank">Atlassian
+                        Marketplace</a> and search for "My Private Notes".</li>
+                <li>Click <strong>"Get it now"</strong> or <strong>"Try it free"</strong>.</li>
+                <li>Select your Jira Cloud instance from the dropdown.</li>
+                <li>Confirm the installation.</li>
+                <li>The app will be immediately available on all Jira issues.</li>
+            </ol>
+        </div>
+
+        <div class="card" id="usage">
+            <h2>How to Use</h2>
+
+            <h3>📝 Accessing Your Notes</h3>
+            <ol>
+                <li>Open any Jira issue.</li>
+                <li>Look at the right sidebar panel.</li>
+                <li>Click on <strong>"Private Notes"</strong> in the issue context section.</li>
+                <li>Your personal note panel will appear.</li>
+            </ol>
+
+            <h3>✍️ Writing Notes</h3>
+            <ul>
+                <li>Simply click inside the text area and start typing.</li>
+                <li>Your notes are <strong>automatically saved</strong> as you type (no save button needed).</li>
+                <li>A "Saved ✓" indicator confirms your note is securely stored.</li>
+            </ul>
+
+            <h3>🗑️ Clearing Notes</h3>
+            <ul>
+                <li>Click the <strong>"Clear"</strong> button at the bottom of the panel.</li>
+                <li>Or press the <code>Escape</code> key while focused on the text area.</li>
+                <li>The note will be permanently deleted.</li>
+            </ul>
+        </div>
+
+        <div class="card" id="features">
+            <h2>Features</h2>
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><strong>🔐 Private Storage</strong></td>
+                    <td>Notes are tied to your personal Atlassian account ID.</td>
+                </tr>
+                <tr>
+                    <td><strong>💾 Auto-Save</strong></td>
+                    <td>Background sync every 800ms as you type.</td>
+                </tr>
+                <tr>
+                    <td><strong>📋 Issue Context</strong></td>
+                    <td>Each Jira issue has its own separate note.</td>
+                </tr>
+                <tr>
+                    <td><strong>⏰ Last Saved Indicator</strong></td>
+                    <td>Shows when your note was last synced.</td>
+                </tr>
+                <tr>
+                    <td><strong>🧹 One-Click Clear</strong></td>
+                    <td>Instantly wipe notes when no longer needed.</td>
+                </tr>
+                <tr>
+                    <td><strong>⚡ Zero Configuration</strong></td>
+                    <td>Works immediately after installation.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card" id="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <h3>Can my teammates see my notes?</h3>
+            <p>No. Notes are cryptographically bound to your Atlassian account. They are invisible to all other users.
+            </p>
+
+            <h3>Can my Jira administrator read my notes?</h3>
+            <p>No. The app uses user-specific storage keys that prevent access by any other account, including
+                administrators.</p>
+
+            <h3>Is there a character limit?</h3>
+            <p>Yes, approximately 32KB per note (roughly 5,000-8,000 words per issue).</p>
+
+            <h3>Does the app work on Jira Mobile?</h3>
+            <p>The app is optimized for the Jira Cloud web interface. Mobile support depends on Atlassian's Forge
+                rendering capabilities.</p>
+
+            <h3>Where is my data stored?</h3>
+            <p>All data is stored securely within the Atlassian ecosystem using Forge Storage API. We do not transmit or
+                store your data on any external servers.</p>
+        </div>
+
+        <div class="card" id="support">
+            <h2>Support</h2>
+            <p><strong>Email:</strong> <a href="mailto:siddhant@siditude.com">siddhant@siditude.com</a></p>
+            <p><strong>Response Time:</strong> Within 24-48 hours on business days.</p>
+            <p style="margin-top: 20px;">
+                <a href="mailto:siddhant@siditude.com" class="btn">Contact Support</a>
+            </p>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Siditude. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="privacy-policy.html">Privacy Policy</a> |
+                <a href="security.html">Security</a> |
+                <a href="https://marketplace.atlassian.com/apps/2739337819" target="_blank">Get on Marketplace</a>
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>
