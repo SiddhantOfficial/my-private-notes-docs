@@ -5,38 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support - My Private Notes for Jira</title>
-    <meta name="description"
-        content="Get help with My Private Notes for Jira. Contact our support team for assistance.">
+    <meta name="description" content="Get help with My Private Notes for Jira.">
     <link rel="canonical" href="https://docs.technicaldost.com/support.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #0052CC;
-            --accent: #00B8D9;
-            --success: #36B37E;
-            --text-primary: #172B4D;
-            --text-secondary: #5E6C84;
-            --bg-primary: #FFFFFF;
-            --bg-secondary: #FAFBFC;
-            --bg-tertiary: #F4F5F7;
-            --border: #DFE1E6;
-            --border-light: #EBECF0;
-            --gradient-hero: linear-gradient(135deg, #00B8D9 0%, #0052CC 100%);
-            --shadow-sm: 0 1px 4px rgba(23, 43, 77, 0.08);
-            --shadow-md: 0 4px 16px rgba(23, 43, 77, 0.12);
-            --shadow-lg: 0 8px 32px rgba(23, 43, 77, 0.16);
-            --radius-sm: 6px;
-            --radius-md: 10px;
-            --radius-lg: 16px;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        :root {
+            --blue-600: #0052CC;
+            --blue-700: #0747A6;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-900: #111827;
         }
 
         html {
@@ -44,134 +36,220 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--gray-900);
+            background: #fff;
             line-height: 1.7;
-            color: var(--text-primary);
-            background: var(--bg-primary);
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Navigation */
-        .navbar {
+        header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            box-shadow: var(--shadow-sm);
-            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--gray-200);
+            z-index: 100;
         }
 
-        .nav-container {
-            max-width: 1200px;
+        .header-inner {
+            max-width: 1140px;
             margin: 0 auto;
             padding: 0 24px;
+            height: 64px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 64px;
         }
 
-        .nav-brand {
+        .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--gray-900);
             text-decoration: none;
-            color: var(--text-primary);
-            font-weight: 700;
-            font-size: 1.1rem;
         }
 
-        .nav-brand-icon {
-            width: 36px;
-            height: 36px;
-            background: var(--gradient-hero);
-            border-radius: var(--radius-sm);
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--blue-600);
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            color: white;
+            font-size: 16px;
         }
 
-        .nav-menu {
+        nav {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 32px;
         }
 
-        .nav-link {
-            display: inline-flex;
-            align-items: center;
-            padding: 8px 16px;
-            color: var(--text-secondary);
-            text-decoration: none;
+        nav a {
+            font-size: 14px;
             font-weight: 500;
-            font-size: 0.9rem;
-            border-radius: var(--radius-sm);
-            transition: all 0.2s ease;
+            color: var(--gray-600);
+            text-decoration: none;
+            transition: color 0.15s;
         }
 
-        .nav-link:hover,
-        .nav-link.active {
-            color: var(--primary);
-            background: rgba(0, 82, 204, 0.08);
+        nav a:hover,
+        nav a.active {
+            color: var(--gray-900);
         }
 
-        /* Hero */
         .hero {
-            padding: 120px 24px 60px;
-            background: var(--gradient-hero);
+            padding: 120px 24px 48px;
             text-align: center;
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--gray-200);
         }
 
         .hero h1 {
-            font-size: clamp(2rem, 4vw, 2.8rem);
-            font-weight: 800;
-            color: white;
-            margin-bottom: 12px;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 8px;
         }
 
         .hero p {
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 1.1rem;
-            max-width: 500px;
-            margin: 0 auto;
+            color: var(--gray-500);
+            font-size: 16px;
         }
 
-        /* Content */
-        .content {
-            max-width: 900px;
+        main {
+            max-width: 700px;
             margin: 0 auto;
-            padding: 60px 24px;
+            padding: 48px 24px 80px;
         }
 
-        p {
-            color: var(--text-secondary);
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .contact-card {
+            padding: 32px 24px;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .contact-card:hover {
+            border-color: var(--blue-600);
+        }
+
+        .contact-card .icon {
+            font-size: 32px;
             margin-bottom: 16px;
         }
 
+        .contact-card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 8px;
+        }
+
+        .contact-card p {
+            font-size: 14px;
+            color: var(--gray-500);
+            margin-bottom: 16px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+
+        .btn-primary {
+            background: var(--blue-600);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--blue-700);
+            text-decoration: none;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--gray-700);
+            border: 1px solid var(--gray-300);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gray-50);
+            text-decoration: none;
+        }
+
+        .response-box {
+            background: #dcfce7;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .response-box h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #166534;
+            margin-bottom: 12px;
+        }
+
+        .response-box p {
+            font-size: 14px;
+            color: #166534;
+            margin: 4px 0;
+        }
+
         h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin: 48px 0 20px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid var(--border-light);
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin: 40px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        p {
+            color: var(--gray-600);
+            margin-bottom: 16px;
+            font-size: 15px;
         }
 
         ul {
-            margin-left: 24px;
-            margin-bottom: 20px;
-            color: var(--text-secondary);
+            margin-left: 20px;
+            margin-bottom: 16px;
         }
 
         li {
-            margin-bottom: 10px;
+            color: var(--gray-600);
+            margin-bottom: 8px;
+            font-size: 15px;
         }
 
         a {
-            color: var(--primary);
+            color: var(--blue-600);
             text-decoration: none;
         }
 
@@ -179,270 +257,172 @@
             text-decoration: underline;
         }
 
-        /* Contact Cards */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            margin: 32px 0;
+        .troubleshoot {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
         }
 
-        .contact-card {
-            background: var(--bg-primary);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-lg);
-            padding: 36px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--primary);
-        }
-
-        .contact-card .icon {
-            width: 72px;
-            height: 72px;
-            background: var(--gradient-hero);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 2rem;
-        }
-
-        .contact-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: var(--text-primary);
-        }
-
-        .contact-card p {
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-        }
-
-        .contact-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--gradient-hero);
-            color: white;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
+        .troubleshoot h3 {
+            font-size: 16px;
             font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .contact-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-            text-decoration: none;
-        }
-
-        .contact-btn.secondary {
-            background: var(--bg-tertiary);
-            color: var(--primary);
-        }
-
-        /* Response Info */
-        .response-info {
-            background: linear-gradient(135deg, #E8F5E9 0%, #E3F2FD 100%);
-            border-radius: var(--radius-lg);
-            padding: 28px;
-            text-align: center;
-            margin: 32px 0;
-        }
-
-        .response-info h3 {
-            color: var(--success);
-            font-size: 1.2rem;
             margin-bottom: 16px;
         }
 
-        .response-info p {
-            margin: 8px 0;
+        .troubleshoot-item {
+            padding: 16px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            border-left: 3px solid var(--blue-600);
         }
 
-        /* Troubleshooting */
-        .troubleshooting {
-            background: var(--bg-tertiary);
-            border-radius: var(--radius-lg);
-            padding: 32px;
-            margin: 32px 0;
-        }
-
-        .troubleshooting h3 {
-            font-size: 1.2rem;
-            margin-bottom: 24px;
-            color: var(--text-primary);
-        }
-
-        .trouble-item {
-            background: var(--bg-primary);
-            border-radius: var(--radius-md);
-            padding: 20px;
-            margin-bottom: 16px;
-            border-left: 4px solid var(--primary);
-        }
-
-        .trouble-item:last-child {
+        .troubleshoot-item:last-child {
             margin-bottom: 0;
         }
 
-        .trouble-item h4 {
-            color: var(--primary);
-            font-size: 1rem;
-            margin-bottom: 8px;
+        .troubleshoot-item h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 4px;
         }
 
-        .trouble-item p {
+        .troubleshoot-item p {
+            font-size: 14px;
+            color: var(--gray-500);
             margin: 0;
-            font-size: 0.95rem;
         }
 
-        /* Footer */
-        .footer {
-            background: var(--text-primary);
-            color: white;
-            padding: 48px 24px;
+        footer {
+            border-top: 1px solid var(--gray-200);
+            padding: 32px 24px;
             text-align: center;
         }
 
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 32px;
-            margin-bottom: 24px;
-            flex-wrap: wrap;
+            gap: 24px;
+            margin-bottom: 16px;
         }
 
-        .footer a {
-            color: rgba(255, 255, 255, 0.8);
+        .footer-links a {
+            font-size: 14px;
+            color: var(--gray-500);
         }
 
-        .footer a:hover {
-            color: white;
+        .footer-links a:hover {
+            color: var(--gray-900);
         }
 
-        .footer-copyright {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.6);
+        .footer-copy {
+            font-size: 13px;
+            color: var(--gray-400);
         }
 
         @media (max-width: 768px) {
-            .nav-menu {
+            nav {
                 display: none;
             }
 
-            .hero {
-                padding: 100px 20px 50px;
-            }
-
-            .content {
-                padding: 40px 20px;
+            .contact-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-brand">
-                <span class="nav-brand-icon">📝</span>
-                <span>My Private Notes</span>
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">📝</span>
+                My Private Notes
             </a>
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link">Documentation</a>
-                <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
-                <a href="security.html" class="nav-link">Security</a>
-                <a href="support.html" class="nav-link active">Support</a>
-            </div>
+            <nav>
+                <a href="index.html">Documentation</a>
+                <a href="privacy-policy.html">Privacy</a>
+                <a href="security.html">Security</a>
+                <a href="support.html" class="active">Support</a>
+            </nav>
         </div>
-    </nav>
-
-    <header class="hero">
-        <h1>💬 Support</h1>
-        <p>We're here to help! Get assistance with My Private Notes for Jira.</p>
     </header>
 
-    <main class="content">
+    <section class="hero">
+        <h1>Support</h1>
+        <p>We're here to help</p>
+    </section>
+
+    <main>
         <div class="contact-grid">
             <div class="contact-card">
                 <div class="icon">📧</div>
                 <h3>Email Support</h3>
-                <p>Send us an email and we'll get back to you within 24-48 hours on business days.</p>
-                <a href="mailto:support@technicaldost.com" class="contact-btn">support@technicaldost.com</a>
+                <p>Get help from our team within 24-48 hours.</p>
+                <a href="mailto:support@technicaldost.com" class="btn btn-primary">Contact Us</a>
             </div>
             <div class="contact-card">
                 <div class="icon">📚</div>
                 <h3>Documentation</h3>
-                <p>Check our documentation for answers to common questions and usage guides.</p>
-                <a href="index.html" class="contact-btn secondary">View Documentation</a>
+                <p>Find answers in our documentation.</p>
+                <a href="index.html" class="btn btn-secondary">View Docs</a>
             </div>
         </div>
 
-        <div class="response-info">
-            <h3>⏰ Response Times</h3>
-            <p><strong>Standard Support:</strong> 24-48 hours on business days (Monday-Friday)</p>
+        <div class="response-box">
+            <h3>Response Times</h3>
+            <p><strong>Standard Support:</strong> 24-48 hours (Mon-Fri)</p>
             <p><strong>Security Issues:</strong> Within 24 hours</p>
         </div>
 
         <h2>Before Contacting Support</h2>
-        <p>To help us assist you faster, please include the following information in your support request:</p>
+        <p>Please include the following in your request:</p>
         <ul>
             <li>Your Jira Cloud instance URL</li>
-            <li>The browser you're using (Chrome, Firefox, Safari, etc.)</li>
-            <li>A description of the issue you're experiencing</li>
-            <li>Steps to reproduce the problem (if applicable)</li>
-            <li>Any error messages you've seen</li>
-            <li>Screenshots (if helpful)</li>
+            <li>Browser you're using</li>
+            <li>Description of the issue</li>
+            <li>Steps to reproduce</li>
+            <li>Any error messages</li>
+            <li>Screenshots if applicable</li>
         </ul>
 
-        <div class="troubleshooting">
-            <h3>🔧 Quick Troubleshooting</h3>
-            <div class="trouble-item">
+        <div class="troubleshoot">
+            <h3>Quick Troubleshooting</h3>
+            <div class="troubleshoot-item">
                 <h4>Notes Not Saving?</h4>
-                <p>Try refreshing the Jira issue page. If the problem persists, check your internet connection and try
-                    clearing your browser cache.</p>
+                <p>Try refreshing the page. Check your internet connection and clear browser cache.</p>
             </div>
-            <div class="trouble-item">
+            <div class="troubleshoot-item">
                 <h4>Panel Not Appearing?</h4>
-                <p>Make sure the app is properly installed on your Jira instance. Jira administrators can verify this
-                    in the "Manage apps" section.</p>
+                <p>Verify the app is installed. Admins can check in "Manage apps".</p>
             </div>
-            <div class="trouble-item">
+            <div class="troubleshoot-item">
                 <h4>Error Messages?</h4>
-                <p>Take a screenshot of the error and include it in your support request. This helps us diagnose the
-                    issue quickly.</p>
+                <p>Take a screenshot and include it in your support request.</p>
             </div>
         </div>
 
         <h2>Feature Requests</h2>
-        <p>We love hearing from our users! If you have ideas for new features or improvements, please email us at <a
-                href="mailto:support@technicaldost.com">support@technicaldost.com</a> with the subject line "Feature
-            Request".</p>
+        <p>Have ideas for improvements? Email us at <a
+                href="mailto:support@technicaldost.com">support@technicaldost.com</a> with subject "Feature Request".
+        </p>
 
         <h2>Security Issues</h2>
-        <p>If you discover a security vulnerability, please report it to <a
-                href="mailto:security@technicaldost.com">security@technicaldost.com</a>. We take security seriously and
-            will respond within 24 hours.</p>
+        <p>Report security vulnerabilities to <a
+                href="mailto:security@technicaldost.com">security@technicaldost.com</a>. We respond within 24 hours.</p>
     </main>
 
-    <footer class="footer">
+    <footer>
         <div class="footer-links">
             <a href="index.html">Documentation</a>
-            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="privacy-policy.html">Privacy</a>
             <a href="security.html">Security</a>
             <a href="support.html">Support</a>
-            <a href="https://marketplace.atlassian.com/apps/2739337819" target="_blank">Marketplace</a>
         </div>
-        <p class="footer-copyright">© 2025 TechnicalDost. All rights reserved.</p>
+        <span class="footer-copy">© 2025 TechnicalDost</span>
     </footer>
 </body>
 

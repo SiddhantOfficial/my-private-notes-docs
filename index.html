@@ -6,48 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Private Notes for Jira - Documentation</title>
     <meta name="description"
-        content="Official documentation for My Private Notes for Jira. Learn how to use your secure, personal notepad for every Jira issue.">
-    <meta name="keywords" content="Jira, private notes, documentation, Atlassian, productivity, security, privacy">
+        content="Official documentation for My Private Notes for Jira. Your secure, personal notepad for every Jira issue.">
     <link rel="canonical" href="https://docs.technicaldost.com/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #0052CC;
-            --primary-light: #4C9AFF;
-            --primary-dark: #0747A6;
-            --secondary: #6554C0;
-            --accent: #00B8D9;
-            --success: #36B37E;
-            --warning: #FFAB00;
-            --text-primary: #172B4D;
-            --text-secondary: #5E6C84;
-            --text-light: #97A0AF;
-            --bg-primary: #FFFFFF;
-            --bg-secondary: #FAFBFC;
-            --bg-tertiary: #F4F5F7;
-            --border: #DFE1E6;
-            --border-light: #EBECF0;
-            --gradient-hero: linear-gradient(135deg, #0052CC 0%, #172B4D 50%, #0052CC 100%);
-            --gradient-accent: linear-gradient(135deg, #00B8D9 0%, #6554C0 100%);
-            --gradient-card: linear-gradient(180deg, #FFFFFF 0%, #FAFBFC 100%);
-            --shadow-xs: 0 1px 2px rgba(23, 43, 77, 0.04);
-            --shadow-sm: 0 1px 4px rgba(23, 43, 77, 0.08);
-            --shadow-md: 0 4px 16px rgba(23, 43, 77, 0.12);
-            --shadow-lg: 0 8px 32px rgba(23, 43, 77, 0.16);
-            --shadow-xl: 0 16px 48px rgba(23, 43, 77, 0.2);
-            --radius-sm: 6px;
-            --radius-md: 10px;
-            --radius-lg: 16px;
-            --radius-xl: 24px;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        :root {
+            --blue-600: #0052CC;
+            --blue-700: #0747A6;
+            --green-500: #22c55e;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
         }
 
         html {
@@ -55,387 +39,273 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.65;
-            color: var(--text-primary);
-            background: var(--bg-primary);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--gray-900);
+            background: #fff;
+            line-height: 1.6;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Navigation */
-        .navbar {
+        /* Header */
+        header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            box-shadow: var(--shadow-sm);
-            z-index: 1000;
-            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--gray-200);
+            z-index: 100;
         }
 
-        .navbar.scrolled {
-            box-shadow: var(--shadow-md);
-        }
-
-        .nav-container {
-            max-width: 1200px;
+        .header-inner {
+            max-width: 1140px;
             margin: 0 auto;
             padding: 0 24px;
+            height: 64px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 64px;
         }
 
-        .nav-brand {
+        .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--gray-900);
             text-decoration: none;
-            color: var(--text-primary);
-            font-weight: 700;
-            font-size: 1.1rem;
         }
 
-        .nav-brand-icon {
-            width: 36px;
-            height: 36px;
-            background: var(--gradient-hero);
-            border-radius: var(--radius-sm);
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--blue-600);
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            color: white;
+            font-size: 16px;
         }
 
-        .nav-menu {
+        nav {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 32px;
         }
 
-        .nav-link {
+        nav a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-600);
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+
+        nav a:hover {
+            color: var(--gray-900);
+        }
+
+        .btn {
             display: inline-flex;
             align-items: center;
-            padding: 8px 16px;
-            color: var(--text-secondary);
-            text-decoration: none;
+            gap: 8px;
+            padding: 10px 18px;
+            font-size: 14px;
             font-weight: 500;
-            font-size: 0.9rem;
-            border-radius: var(--radius-sm);
-            transition: all 0.2s ease;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.15s;
         }
 
-        .nav-link:hover {
-            color: var(--primary);
-            background: var(--bg-tertiary);
+        .btn-primary {
+            background: var(--blue-600);
+            color: white;
         }
 
-        .nav-link.active {
-            color: var(--primary);
-            background: rgba(0, 82, 204, 0.08);
+        .btn-primary:hover {
+            background: var(--blue-700);
         }
 
-        .nav-cta {
-            background: var(--primary);
-            color: white !important;
-            margin-left: 8px;
-        }
-
-        .nav-cta:hover {
-            background: var(--primary-dark);
-            color: white !important;
-        }
-
-        /* Hero Section */
+        /* Hero */
         .hero {
-            padding: 140px 24px 100px;
-            background: var(--gradient-hero);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 30% 50%, rgba(0, 184, 217, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 70% 80%, rgba(101, 84, 192, 0.15) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
+            padding: 140px 24px 80px;
             text-align: center;
-            position: relative;
-            z-index: 1;
+            background: linear-gradient(180deg, #fff 0%, var(--gray-50) 100%);
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            padding: 8px 18px;
-            border-radius: 50px;
-            font-size: 0.85rem;
+            padding: 6px 14px;
+            background: #dcfce7;
+            color: #166534;
+            font-size: 13px;
             font-weight: 500;
-            color: white;
+            border-radius: 100px;
             margin-bottom: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        .hero-badge-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--success);
+        .hero-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: #22c55e;
             border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-
-            50% {
-                opacity: 0.6;
-                transform: scale(1.1);
-            }
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-weight: 800;
-            color: white;
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 700;
+            color: var(--gray-900);
+            letter-spacing: -0.02em;
+            line-height: 1.1;
             margin-bottom: 20px;
-            letter-spacing: -0.03em;
-            line-height: 1.15;
         }
 
-        .hero-subtitle {
-            font-size: clamp(1.1rem, 2vw, 1.35rem);
-            color: rgba(255, 255, 255, 0.85);
-            max-width: 650px;
-            margin: 0 auto 36px;
-            line-height: 1.7;
+        .hero p {
+            font-size: 18px;
+            color: var(--gray-600);
+            max-width: 560px;
+            margin: 0 auto 32px;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 16px;
+            gap: 12px;
             justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 28px;
-            border-radius: var(--radius-md);
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background: white;
-            color: var(--primary);
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.15);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: white;
+            color: var(--gray-700);
+            border: 1px solid var(--gray-300);
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.25);
+            background: var(--gray-50);
+            border-color: var(--gray-400);
         }
 
         /* Main Content */
-        .main-content {
-            max-width: 1200px;
+        main {
+            max-width: 800px;
             margin: 0 auto;
-            padding: 80px 24px;
+            padding: 64px 24px;
         }
 
-        /* Section Styles */
         section {
-            margin-bottom: 100px;
+            margin-bottom: 64px;
         }
 
-        .section-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 50px;
-        }
-
-        .section-label {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--bg-tertiary);
-            padding: 6px 14px;
-            border-radius: 50px;
-            font-size: 0.8rem;
+        h2 {
+            font-size: 24px;
             font-weight: 600;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            color: var(--gray-900);
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+
+        p {
+            color: var(--gray-600);
             margin-bottom: 16px;
         }
 
-        .section-title {
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 16px;
-            letter-spacing: -0.02em;
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        /* Feature Cards */
-        .features-grid {
+        /* Feature Grid */
+        .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 24px;
         }
 
-        .feature-card {
-            background: var(--gradient-card);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-lg);
-            padding: 32px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+        .feature {
+            padding: 24px;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            transition: all 0.2s;
         }
 
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-accent);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-            border-color: transparent;
-        }
-
-        .feature-card:hover::before {
-            opacity: 1;
+        .feature:hover {
+            border-color: var(--blue-600);
+            box-shadow: 0 4px 12px rgba(0, 82, 204, 0.08);
         }
 
         .feature-icon {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
-            border-radius: var(--radius-md);
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
+            font-size: 20px;
+            margin-bottom: 16px;
         }
 
-        .feature-card h3 {
-            font-size: 1.2rem;
+        .feature h3 {
+            font-size: 16px;
             font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 10px;
+            color: var(--gray-900);
+            margin-bottom: 6px;
         }
 
-        .feature-card p {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            line-height: 1.65;
+        .feature p {
+            font-size: 14px;
+            color: var(--gray-500);
+            margin: 0;
         }
 
         /* Steps */
-        .steps-container {
-            max-width: 800px;
-            margin: 0 auto;
+        .steps {
+            margin-top: 24px;
         }
 
-        .step-item {
+        .step {
             display: flex;
-            gap: 24px;
-            padding: 28px;
-            background: var(--bg-primary);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-lg);
-            margin-bottom: 16px;
-            transition: all 0.3s ease;
+            gap: 16px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--gray-200);
         }
 
-        .step-item:hover {
-            border-color: var(--primary-light);
-            box-shadow: var(--shadow-md);
+        .step:last-child {
+            border-bottom: none;
         }
 
-        .step-number {
+        .step-num {
             flex-shrink: 0;
-            width: 48px;
-            height: 48px;
-            background: var(--gradient-hero);
+            width: 28px;
+            height: 28px;
+            background: var(--blue-600);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 13px;
+            font-weight: 600;
         }
 
         .step-content h4 {
-            font-size: 1.1rem;
+            font-size: 15px;
             font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 8px;
+            color: var(--gray-900);
+            margin-bottom: 4px;
         }
 
         .step-content p {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
+            font-size: 14px;
+            color: var(--gray-500);
+            margin: 0;
         }
 
         .step-content a {
-            color: var(--primary);
+            color: var(--blue-600);
             text-decoration: none;
         }
 
@@ -443,316 +313,120 @@
             text-decoration: underline;
         }
 
-        /* Features Table */
-        .table-container {
-            background: var(--bg-primary);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .features-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .features-table th,
-        .features-table td {
-            padding: 18px 24px;
-            text-align: left;
-        }
-
-        .features-table th {
-            background: var(--bg-tertiary);
-            font-weight: 600;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            border-bottom: 1px solid var(--border-light);
-        }
-
-        .features-table td {
-            border-bottom: 1px solid var(--border-light);
-        }
-
-        .features-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .features-table tr:hover td {
-            background: var(--bg-secondary);
-        }
-
-        .features-table .feature-name {
-            font-weight: 600;
-            color: var(--text-primary);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
         /* FAQ */
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
         .faq-item {
-            background: var(--bg-primary);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-md);
-            margin-bottom: 12px;
-            overflow: hidden;
-            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--gray-200);
         }
 
-        .faq-item:hover {
-            border-color: var(--border);
-        }
-
-        .faq-question {
-            padding: 20px 24px;
+        .faq-q {
+            padding: 20px 0;
+            font-size: 15px;
             font-weight: 600;
-            color: var(--text-primary);
+            color: var(--gray-900);
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: background 0.2s ease;
         }
 
-        .faq-question:hover {
-            background: var(--bg-secondary);
+        .faq-q::after {
+            content: '+';
+            font-size: 20px;
+            color: var(--gray-400);
+            transition: transform 0.2s;
         }
 
-        .faq-toggle {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: var(--bg-tertiary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            transition: all 0.3s ease;
-        }
-
-        .faq-item.active .faq-toggle {
-            background: var(--primary);
-            color: white;
+        .faq-item.open .faq-q::after {
             transform: rotate(45deg);
         }
 
-        .faq-answer {
-            padding: 0 24px;
+        .faq-a {
             max-height: 0;
             overflow: hidden;
-            transition: all 0.3s ease;
+            transition: max-height 0.3s ease;
         }
 
-        .faq-item.active .faq-answer {
-            padding: 0 24px 20px;
-            max-height: 500px;
+        .faq-item.open .faq-a {
+            max-height: 200px;
         }
 
-        .faq-answer p {
-            color: var(--text-secondary);
-            line-height: 1.7;
+        .faq-a p {
+            padding-bottom: 20px;
+            font-size: 14px;
+            color: var(--gray-600);
         }
 
-        /* CTA Section */
-        .cta-section {
-            background: var(--gradient-accent);
-            border-radius: var(--radius-xl);
-            padding: 60px 40px;
+        /* CTA */
+        .cta {
+            background: var(--gray-900);
+            border-radius: 16px;
+            padding: 48px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
 
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 100%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .cta-section h2 {
-            font-size: 2rem;
-            font-weight: 700;
+        .cta h2 {
             color: white;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
-        .cta-section p {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 28px;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
+        .cta p {
+            color: var(--gray-400);
+            margin-bottom: 24px;
         }
 
-        .cta-btn {
+        .cta .btn-primary {
             background: white;
-            color: var(--primary);
-            padding: 16px 36px;
-            border-radius: var(--radius-md);
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s ease;
+            color: var(--gray-900);
         }
 
-        .cta-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
+        .cta .btn-primary:hover {
+            background: var(--gray-100);
         }
 
         /* Footer */
-        .footer {
-            background: var(--text-primary);
-            color: white;
-            padding: 60px 24px 40px;
+        footer {
+            border-top: 1px solid var(--gray-200);
+            padding: 48px 24px;
         }
 
-        .footer-content {
-            max-width: 1200px;
+        .footer-inner {
+            max-width: 800px;
             margin: 0 auto;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 48px;
-            margin-bottom: 48px;
-        }
-
-        .footer-brand h3 {
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-        }
-
-        .footer-brand p {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        .footer-column h4 {
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 20px;
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column li {
-            margin-bottom: 12px;
-        }
-
-        .footer-column a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .footer-column a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 16px;
+            gap: 24px;
         }
 
-        .footer-copyright {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .footer-legal {
+        .footer-links {
             display: flex;
             gap: 24px;
         }
 
-        .footer-legal a {
-            color: rgba(255, 255, 255, 0.6);
+        .footer-links a {
+            font-size: 14px;
+            color: var(--gray-500);
             text-decoration: none;
-            font-size: 0.9rem;
         }
 
-        .footer-legal a:hover {
-            color: white;
+        .footer-links a:hover {
+            color: var(--gray-900);
         }
 
-        /* Mobile Menu */
-        .nav-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        .nav-toggle span {
-            width: 24px;
-            height: 2px;
-            background: var(--text-primary);
-            transition: all 0.3s ease;
+        .footer-copy {
+            font-size: 14px;
+            color: var(--gray-400);
         }
 
         /* Responsive */
-        @media (max-width: 900px) {
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 32px;
-            }
-        }
-
         @media (max-width: 768px) {
-            .nav-menu {
+            nav {
                 display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: white;
-                flex-direction: column;
-                padding: 16px;
-                box-shadow: var(--shadow-lg);
-                gap: 4px;
             }
 
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .nav-toggle {
-                display: flex;
-            }
-
-            .hero {
-                padding: 120px 20px 80px;
+            .features {
+                grid-template-columns: 1fr;
             }
 
             .hero-buttons {
@@ -760,26 +434,11 @@
                 align-items: center;
             }
 
-            .step-item {
-                flex-direction: column;
-                text-align: center;
+            .cta {
+                padding: 32px 24px;
             }
 
-            .features-table th,
-            .features-table td {
-                padding: 14px 16px;
-            }
-
-            .cta-section {
-                padding: 48px 24px;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .footer-bottom {
+            .footer-inner {
                 flex-direction: column;
                 text-align: center;
             }
@@ -788,358 +447,155 @@
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="/" class="nav-brand">
-                <span class="nav-brand-icon">📝</span>
-                <span>My Private Notes</span>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <span class="logo-icon">📝</span>
+                My Private Notes
             </a>
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="nav-menu" id="navMenu">
-                <a href="#overview" class="nav-link active">Overview</a>
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#installation" class="nav-link">Installation</a>
-                <a href="#faq" class="nav-link">FAQ</a>
-                <a href="privacy-policy.html" class="nav-link">Privacy</a>
-                <a href="security.html" class="nav-link">Security</a>
-                <a href="support.html" class="nav-link">Support</a>
-                <a href="https://marketplace.atlassian.com/apps/2739337819" class="nav-link nav-cta" target="_blank">Get
-                    App</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="hero-badge-dot"></span>
-                Official Documentation
-            </div>
-            <h1>Your Private Notepad for Every Jira Issue</h1>
-            <p class="hero-subtitle">Add personal notes to any Jira issue that only you can see. Auto-saves instantly.
-                100% private — not even admins can access your notes.</p>
-            <div class="hero-buttons">
-                <a href="https://marketplace.atlassian.com/apps/2739337819" class="btn btn-primary" target="_blank">
-                    <span>🚀</span> Get Started Free
-                </a>
-                <a href="#features" class="btn btn-secondary">
-                    <span>✨</span> Explore Features
-                </a>
-            </div>
+            <nav>
+                <a href="#features">Features</a>
+                <a href="#installation">Installation</a>
+                <a href="#faq">FAQ</a>
+                <a href="privacy-policy.html">Privacy</a>
+                <a href="security.html">Security</a>
+                <a href="support.html">Support</a>
+            </nav>
+            <a href="https://marketplace.atlassian.com/apps/2739337819" class="btn btn-primary" target="_blank">
+                Get App →
+            </a>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
+    <section class="hero">
+        <span class="hero-badge">Official Documentation</span>
+        <h1>Private notes for<br>every Jira issue</h1>
+        <p>Keep personal notes on any Jira issue that only you can see. Auto-saves instantly. 100% private.</p>
+        <div class="hero-buttons">
+            <a href="https://marketplace.atlassian.com/apps/2739337819" class="btn btn-primary" target="_blank">
+                Install Free →
+            </a>
+            <a href="#features" class="btn btn-secondary">
+                Learn More
+            </a>
+        </div>
+    </section>
 
-        <!-- Overview Section -->
-        <section id="overview">
-            <div class="section-header">
-                <span class="section-label">Overview</span>
-                <h2 class="section-title">Everything You Need to Stay Organized</h2>
-                <p class="section-subtitle">My Private Notes provides a secure, personal space for your thoughts on
-                    every Jira issue. Your notes are completely private and visible only to you.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
+    <main>
+        <section id="features">
+            <h2>Features</h2>
+            <p>Everything you need to keep private notes on your Jira issues.</p>
+            <div class="features">
+                <div class="feature">
                     <div class="feature-icon">🔒</div>
                     <h3>100% Private</h3>
-                    <p>Notes are cryptographically bound to your account. No one else can see them — not even Jira
-                        administrators.</p>
+                    <p>Notes are bound to your account. No one else can see them—not even admins.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature">
                     <div class="feature-icon">⚡</div>
                     <h3>Auto-Save</h3>
-                    <p>Your notes save automatically as you type. No save button needed — just write and it's stored
-                        securely.</p>
+                    <p>Your notes save automatically as you type. No save button needed.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Issue-Specific</h3>
-                    <p>Each Jira issue has its own separate note space. Keep your thoughts organized and contextual.</p>
+                <div class="feature">
+                    <div class="feature-icon">📌</div>
+                    <h3>Per-Issue Notes</h3>
+                    <p>Each Jira issue has its own separate note space.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature">
                     <div class="feature-icon">🚀</div>
-                    <h3>Zero Configuration</h3>
-                    <p>Works immediately after installation. No setup required — open any issue and start taking notes.
-                    </p>
+                    <h3>Zero Config</h3>
+                    <p>Works immediately after installation. No setup required.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Features Section -->
-        <section id="features">
-            <div class="section-header">
-                <span class="section-label">Features</span>
-                <h2 class="section-title">Powerful Features, Simple Experience</h2>
-                <p class="section-subtitle">Everything you need to keep private notes on your Jira issues, nothing you
-                    don't.</p>
-            </div>
-            <div class="table-container">
-                <table class="features-table">
-                    <thead>
-                        <tr>
-                            <th>Feature</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="feature-name"><span>🔐</span> Private Storage</td>
-                            <td>Notes are tied to your personal Atlassian account ID — completely invisible to others.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="feature-name"><span>💾</span> Auto-Save</td>
-                            <td>Notes sync automatically every 800ms as you type. Never lose your work.</td>
-                        </tr>
-                        <tr>
-                            <td class="feature-name"><span>📌</span> Issue Context</td>
-                            <td>Each Jira issue has its own separate note. Perfect for tracking per-issue context.</td>
-                        </tr>
-                        <tr>
-                            <td class="feature-name"><span>⏰</span> Last Saved Indicator</td>
-                            <td>Visual confirmation showing exactly when your note was last synced.</td>
-                        </tr>
-                        <tr>
-                            <td class="feature-name"><span>🗑️</span> One-Click Clear</td>
-                            <td>Instantly delete notes when no longer needed with a single click.</td>
-                        </tr>
-                        <tr>
-                            <td class="feature-name"><span>⚙️</span> Zero Configuration</td>
-                            <td>Works immediately after installation with no admin setup required.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- Installation Section -->
         <section id="installation">
-            <div class="section-header">
-                <span class="section-label">Installation</span>
-                <h2 class="section-title">Get Started in Minutes</h2>
-                <p class="section-subtitle">Install My Private Notes and start taking private notes on your Jira issues
-                    in just a few clicks.</p>
-            </div>
-            <div class="steps-container">
-                <div class="step-item">
-                    <div class="step-number">1</div>
+            <h2>Installation</h2>
+            <p>Get started in under a minute.</p>
+            <div class="steps">
+                <div class="step">
+                    <span class="step-num">1</span>
                     <div class="step-content">
-                        <h4>Visit the Atlassian Marketplace</h4>
-                        <p>Go to the <a href="https://marketplace.atlassian.com/apps/2739337819" target="_blank">My
-                                Private Notes for Jira</a> listing on the Atlassian Marketplace.</p>
+                        <h4>Visit the Marketplace</h4>
+                        <p>Go to <a href="https://marketplace.atlassian.com/apps/2739337819" target="_blank">My Private
+                                Notes</a> on the Atlassian Marketplace.</p>
                     </div>
                 </div>
-                <div class="step-item">
-                    <div class="step-number">2</div>
+                <div class="step">
+                    <span class="step-num">2</span>
                     <div class="step-content">
                         <h4>Install the App</h4>
-                        <p>Click "Get it now" or "Try it free" to begin the installation process for your Jira instance.
-                        </p>
+                        <p>Click "Get it now" and select your Jira Cloud instance.</p>
                     </div>
                 </div>
-                <div class="step-item">
-                    <div class="step-number">3</div>
+                <div class="step">
+                    <span class="step-num">3</span>
                     <div class="step-content">
-                        <h4>Select Your Instance</h4>
-                        <p>Choose your Jira Cloud instance from the dropdown menu and confirm the installation.</p>
-                    </div>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h4>Start Using</h4>
-                        <p>Open any Jira issue and find "Private Notes" in the right sidebar. That's it — start taking
-                            notes!</p>
+                        <h4>Start Taking Notes</h4>
+                        <p>Open any issue and find "Private Notes" in the right sidebar. That's it!</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ Section -->
         <section id="faq">
-            <div class="section-header">
-                <span class="section-label">FAQ</span>
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-subtitle">Find answers to common questions about My Private Notes for Jira.</p>
+            <h2>FAQ</h2>
+            <div class="faq-item open">
+                <div class="faq-q">Can my teammates see my notes?</div>
+                <div class="faq-a">
+                    <p>No. Notes are cryptographically bound to your Atlassian account. They are invisible to all other
+                        users, including administrators.</p>
+                </div>
             </div>
-            <div class="faq-container">
-                <div class="faq-item active">
-                    <div class="faq-question">
-                        <span>Can my teammates see my notes?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>No. Notes are cryptographically bound to your Atlassian account. They are invisible to all
-                            other users on your Jira instance, including administrators.</p>
-                    </div>
+            <div class="faq-item">
+                <div class="faq-q">Can Jira administrators read my notes?</div>
+                <div class="faq-a">
+                    <p>No. The app uses user-specific storage keys that prevent access by any other account, including
+                        Jira administrators.</p>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Can my Jira administrator read my notes?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>No. The app uses user-specific storage keys that prevent access by any other account,
-                            including Jira administrators. Your notes are truly private.</p>
-                    </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Is there a character limit?</div>
+                <div class="faq-a">
+                    <p>Yes, approximately 32KB per note (roughly 5,000-8,000 words per issue).</p>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Is there a character limit?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes, approximately 32KB per note (roughly 5,000-8,000 words per issue). This is more than
-                            enough for detailed notes on any issue.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Where is my data stored?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>All data is stored securely within the Atlassian ecosystem using Forge Storage API. We do not
-                            transmit or store your data on any external servers.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Does the app work on Jira Mobile?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>The app is optimized for the Jira Cloud web interface. Mobile support depends on Atlassian's
-                            Forge rendering capabilities.</p>
-                    </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Where is my data stored?</div>
+                <div class="faq-a">
+                    <p>All data is stored securely within Atlassian's infrastructure using Forge Storage API. No
+                        external servers.</p>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <h2>Ready to Get Started?</h2>
-            <p>Install My Private Notes for Jira today and start keeping your thoughts organized and private.</p>
-            <a href="https://marketplace.atlassian.com/apps/2739337819" class="cta-btn" target="_blank">
-                <span>🚀</span> Install Now — It's Free
-            </a>
+        <section>
+            <div class="cta">
+                <h2>Ready to get started?</h2>
+                <p>Install My Private Notes for free and start keeping your thoughts private.</p>
+                <a href="https://marketplace.atlassian.com/apps/2739337819" class="btn btn-primary" target="_blank">
+                    Install Now →
+                </a>
+            </div>
         </section>
-
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3>📝 My Private Notes for Jira</h3>
-                    <p>Your secure, personal notepad for every Jira issue. Keep your thoughts private — only you can see
-                        them.</p>
-                </div>
-                <div class="footer-column">
-                    <h4>Documentation</h4>
-                    <ul>
-                        <li><a href="#overview">Overview</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#installation">Installation</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="security.html">Security</a></li>
-                        <li><a href="support.html">Support</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="https://marketplace.atlassian.com/apps/2739337819" target="_blank">Marketplace</a>
-                        </li>
-                        <li><a href="mailto:support@technicaldost.com">Contact Us</a></li>
-                    </ul>
-                </div>
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="security.html">Security</a>
+                <a href="support.html">Support</a>
+                <a href="https://marketplace.atlassian.com/apps/2739337819" target="_blank">Marketplace</a>
             </div>
-            <div class="footer-bottom">
-                <p class="footer-copyright">© 2025 TechnicalDost. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="privacy-policy.html">Privacy</a>
-                    <a href="security.html">Security</a>
-                    <a href="support.html">Support</a>
-                </div>
-            </div>
+            <span class="footer-copy">© 2025 TechnicalDost</span>
         </div>
     </footer>
 
     <script>
-        // Navbar scroll effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Mobile menu toggle
-        const navToggle = document.getElementById('navToggle');
-        const navMenu = document.getElementById('navMenu');
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-        // FAQ toggle
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const item = question.parentElement;
-                item.classList.toggle('active');
-            });
-        });
-
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const navHeight = navbar.offsetHeight;
-                    const targetPosition = target.offsetTop - navHeight - 20;
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                    navMenu.classList.remove('active');
-                }
-            });
-        });
-
-        // Active nav link on scroll
-        const sections = document.querySelectorAll('section[id]');
-        window.addEventListener('scroll', () => {
-            const scrollY = window.pageYOffset;
-            sections.forEach(section => {
-                const sectionHeight = section.offsetHeight;
-                const sectionTop = section.offsetTop - 100;
-                const sectionId = section.getAttribute('id');
-                const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-                if (navLink) {
-                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                        navLink.classList.add('active');
-                    } else {
-                        navLink.classList.remove('active');
-                    }
-                }
+        document.querySelectorAll('.faq-q').forEach(q => {
+            q.addEventListener('click', () => {
+                q.parentElement.classList.toggle('open');
             });
         });
     </script>

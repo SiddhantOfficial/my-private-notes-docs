@@ -5,41 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - My Private Notes for Jira</title>
-    <meta name="description"
-        content="Privacy Policy for My Private Notes for Jira. Learn how we protect your data and respect your privacy.">
+    <meta name="description" content="Privacy Policy for My Private Notes for Jira.">
     <link rel="canonical" href="https://docs.technicaldost.com/privacy-policy.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #0052CC;
-            --primary-light: #4C9AFF;
-            --primary-dark: #0747A6;
-            --secondary: #6554C0;
-            --accent: #00B8D9;
-            --success: #36B37E;
-            --text-primary: #172B4D;
-            --text-secondary: #5E6C84;
-            --bg-primary: #FFFFFF;
-            --bg-secondary: #FAFBFC;
-            --bg-tertiary: #F4F5F7;
-            --border: #DFE1E6;
-            --border-light: #EBECF0;
-            --gradient-hero: linear-gradient(135deg, #6554C0 0%, #0052CC 100%);
-            --shadow-sm: 0 1px 4px rgba(23, 43, 77, 0.08);
-            --shadow-md: 0 4px 16px rgba(23, 43, 77, 0.12);
-            --shadow-lg: 0 8px 32px rgba(23, 43, 77, 0.16);
-            --radius-sm: 6px;
-            --radius-md: 10px;
-            --radius-lg: 16px;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        :root {
+            --blue-600: #0052CC;
+            --blue-700: #0747A6;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-900: #111827;
         }
 
         html {
@@ -47,186 +36,160 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--gray-900);
+            background: #fff;
             line-height: 1.7;
-            color: var(--text-primary);
-            background: var(--bg-primary);
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Navigation */
-        .navbar {
+        header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            box-shadow: var(--shadow-sm);
-            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--gray-200);
+            z-index: 100;
         }
 
-        .nav-container {
-            max-width: 1200px;
+        .header-inner {
+            max-width: 1140px;
             margin: 0 auto;
             padding: 0 24px;
+            height: 64px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 64px;
         }
 
-        .nav-brand {
+        .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--gray-900);
             text-decoration: none;
-            color: var(--text-primary);
-            font-weight: 700;
-            font-size: 1.1rem;
         }
 
-        .nav-brand-icon {
-            width: 36px;
-            height: 36px;
-            background: var(--gradient-hero);
-            border-radius: var(--radius-sm);
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--blue-600);
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            color: white;
+            font-size: 16px;
         }
 
-        .nav-menu {
+        nav {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 32px;
         }
 
-        .nav-link {
-            display: inline-flex;
-            align-items: center;
-            padding: 8px 16px;
-            color: var(--text-secondary);
-            text-decoration: none;
+        nav a {
+            font-size: 14px;
             font-weight: 500;
-            font-size: 0.9rem;
-            border-radius: var(--radius-sm);
-            transition: all 0.2s ease;
+            color: var(--gray-600);
+            text-decoration: none;
+            transition: color 0.15s;
         }
 
-        .nav-link:hover,
-        .nav-link.active {
-            color: var(--primary);
-            background: rgba(0, 82, 204, 0.08);
+        nav a:hover,
+        nav a.active {
+            color: var(--gray-900);
         }
 
-        /* Hero */
         .hero {
-            padding: 120px 24px 60px;
-            background: var(--gradient-hero);
+            padding: 120px 24px 48px;
             text-align: center;
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--gray-200);
         }
 
         .hero h1 {
-            font-size: clamp(2rem, 4vw, 2.8rem);
-            font-weight: 800;
-            color: white;
-            margin-bottom: 12px;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 8px;
         }
 
         .hero p {
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 1.1rem;
+            color: var(--gray-500);
+            font-size: 16px;
         }
 
-        /* Content */
-        .content {
-            max-width: 800px;
+        main {
+            max-width: 700px;
             margin: 0 auto;
-            padding: 60px 24px;
+            padding: 48px 24px 80px;
         }
 
-        .last-updated {
+        .updated {
             display: inline-block;
-            background: var(--bg-tertiary);
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
+            background: var(--gray-100);
+            color: var(--gray-500);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 13px;
             margin-bottom: 32px;
         }
 
-        .highlight-box {
-            background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 100%);
-            border-left: 4px solid var(--primary);
-            padding: 24px;
-            border-radius: var(--radius-md);
-            margin-bottom: 40px;
+        .highlight {
+            background: #dbeafe;
+            border-left: 3px solid var(--blue-600);
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-bottom: 32px;
         }
 
-        .highlight-box strong {
-            color: var(--primary);
-        }
-
-        .highlight-box p {
+        .highlight p {
             margin: 0;
-            color: var(--text-secondary);
+            color: var(--gray-700);
+            font-size: 15px;
+        }
+
+        .highlight strong {
+            color: var(--blue-600);
         }
 
         h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin: 48px 0 20px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid var(--border-light);
-        }
-
-        h2:first-of-type {
-            margin-top: 0;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin: 40px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--gray-200);
         }
 
         p {
-            color: var(--text-secondary);
+            color: var(--gray-600);
             margin-bottom: 16px;
+            font-size: 15px;
         }
 
-        ul,
-        ol {
-            margin-left: 24px;
-            margin-bottom: 20px;
-            color: var(--text-secondary);
+        ul {
+            margin-left: 20px;
+            margin-bottom: 16px;
         }
 
         li {
-            margin-bottom: 10px;
+            color: var(--gray-600);
+            margin-bottom: 8px;
+            font-size: 15px;
         }
 
         li strong {
-            color: var(--text-primary);
-        }
-
-        .gdpr-box {
-            background: linear-gradient(135deg, #E8F5E9 0%, #E3F2FD 100%);
-            border: 1px solid var(--success);
-            border-radius: var(--radius-lg);
-            padding: 28px;
-            margin: 32px 0;
-        }
-
-        .gdpr-box h3 {
-            color: var(--success);
-            font-size: 1.2rem;
-            margin-bottom: 16px;
-        }
-
-        .gdpr-box ul {
-            margin-bottom: 0;
+            color: var(--gray-900);
         }
 
         a {
-            color: var(--primary);
+            color: var(--blue-600);
             text-decoration: none;
         }
 
@@ -235,216 +198,175 @@
         }
 
         .contact-box {
-            background: var(--bg-tertiary);
-            border-radius: var(--radius-lg);
-            padding: 40px;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 32px;
             text-align: center;
-            margin-top: 48px;
+            margin-top: 40px;
         }
 
         .contact-box h3 {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-            color: var(--text-primary);
+            font-size: 18px;
+            margin-bottom: 8px;
         }
 
         .contact-box p {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
-        .contact-btn {
+        .btn {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            background: var(--gradient-hero);
-            color: white;
-            padding: 14px 32px;
-            border-radius: 50px;
+            gap: 8px;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            background: var(--blue-600);
+            color: white;
         }
 
-        .contact-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
+        .btn:hover {
+            background: var(--blue-700);
             text-decoration: none;
         }
 
-        /* Footer */
-        .footer {
-            background: var(--text-primary);
-            color: white;
-            padding: 48px 24px;
+        footer {
+            border-top: 1px solid var(--gray-200);
+            padding: 32px 24px;
             text-align: center;
         }
 
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 32px;
-            margin-bottom: 24px;
-            flex-wrap: wrap;
+            gap: 24px;
+            margin-bottom: 16px;
         }
 
-        .footer a {
-            color: rgba(255, 255, 255, 0.8);
+        .footer-links a {
+            font-size: 14px;
+            color: var(--gray-500);
         }
 
-        .footer a:hover {
-            color: white;
+        .footer-links a:hover {
+            color: var(--gray-900);
         }
 
-        .footer-copyright {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.6);
+        .footer-copy {
+            font-size: 13px;
+            color: var(--gray-400);
         }
 
         @media (max-width: 768px) {
-            .nav-menu {
+            nav {
                 display: none;
-            }
-
-            .hero {
-                padding: 100px 20px 50px;
-            }
-
-            .content {
-                padding: 40px 20px;
             }
         }
     </style>
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-brand">
-                <span class="nav-brand-icon">📝</span>
-                <span>My Private Notes</span>
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">📝</span>
+                My Private Notes
             </a>
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link">Documentation</a>
-                <a href="privacy-policy.html" class="nav-link active">Privacy Policy</a>
-                <a href="security.html" class="nav-link">Security</a>
-                <a href="support.html" class="nav-link">Support</a>
-            </div>
+            <nav>
+                <a href="index.html">Documentation</a>
+                <a href="privacy-policy.html" class="active">Privacy</a>
+                <a href="security.html">Security</a>
+                <a href="support.html">Support</a>
+            </nav>
         </div>
-    </nav>
-
-    <header class="hero">
-        <h1>🔒 Privacy Policy</h1>
-        <p>My Private Notes for Jira</p>
     </header>
 
-    <main class="content">
-        <span class="last-updated">Last Updated: December 26, 2025</span>
+    <section class="hero">
+        <h1>Privacy Policy</h1>
+        <p>My Private Notes for Jira</p>
+    </section>
 
-        <p>My Private Notes for Jira ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy
-            explains how we collect, use, and safeguard your information when you use our Atlassian Marketplace app.</p>
+    <main>
+        <span class="updated">Last Updated: December 26, 2025</span>
 
-        <div class="highlight-box">
+        <div class="highlight">
             <p><strong>TL;DR:</strong> Your notes stay completely private. We never access, read, sell, or share your
                 data. Everything is stored securely within Atlassian's infrastructure.</p>
         </div>
 
-        <h2>1. Data Collection and Storage</h2>
-        <p>Our app allows you to create private notes associated with Jira issues. Here's what you need to know:</p>
+        <h2>1. Data Collection</h2>
+        <p>The App collects and stores only:</p>
         <ul>
             <li><strong>Note Content:</strong> The text you write in your private notes.</li>
-            <li><strong>Account Identifier:</strong> Your Atlassian Account ID (used only to associate notes with your
-                account).</li>
-            <li><strong>Issue Context:</strong> The Jira issue key associated with each note.</li>
+            <li><strong>Account Identifier:</strong> Your Atlassian Account ID (to associate notes with your account).
+            </li>
+            <li><strong>Issue Identifier:</strong> The Jira issue key for each note.</li>
         </ul>
-        <p>All data is stored using Atlassian's Forge Storage API within their secure infrastructure. <strong>We do not
-                operate any external servers.</strong></p>
+        <p>All data is stored using Atlassian's Forge Storage API. <strong>We do not operate any external
+                servers.</strong></p>
 
         <h2>2. Data Usage</h2>
-        <p>We use your data solely to provide the functionality of the app—specifically, to allow you to save and
-            retrieve your private notes.</p>
-        <p><strong>We do NOT:</strong></p>
+        <p>We use your data solely to save and retrieve your private notes. <strong>We do NOT:</strong></p>
         <ul>
             <li>Analyze your note contents</li>
             <li>Sell your data to third parties</li>
             <li>Share your data with anyone</li>
             <li>Use your data for advertising</li>
-            <li>Transfer data outside the Atlassian ecosystem</li>
+            <li>Transfer data outside Atlassian</li>
         </ul>
 
-        <h2>3. Data Access and Privacy</h2>
-        <p>Your notes are keyed to your unique Atlassian Account ID. This means:</p>
+        <h2>3. Data Privacy</h2>
+        <p>Your notes are keyed to your unique Atlassian Account ID:</p>
         <ul>
-            <li><strong>Only YOU can see your notes</strong> — no one else.</li>
-            <li><strong>Jira Administrators cannot access your notes</strong> — the storage is user-specific.</li>
-            <li><strong>Other users on your Jira instance cannot see your notes</strong> — each user has completely
-                separate storage.</li>
-            <li><strong>Even we (the app developers) cannot access your notes</strong> — data is encrypted within
-                Atlassian's infrastructure.</li>
+            <li><strong>Only YOU can see your notes</strong></li>
+            <li><strong>Jira Administrators cannot access your notes</strong></li>
+            <li><strong>Other users cannot see your notes</strong></li>
+            <li><strong>Even we cannot access your notes</strong></li>
         </ul>
 
         <h2>4. Data Retention</h2>
-        <p>Your notes are retained as long as the app is installed on your Jira instance.</p>
         <ul>
-            <li>If you uninstall the app, your data remains in Atlassian's storage until their standard data retention
-                policies clear it.</li>
-            <li>You can delete individual notes at any time using the "Clear" button in the app.</li>
-            <li>If you reinstall the app, your previously saved notes will still be available.</li>
+            <li>Notes are retained as long as the app is installed.</li>
+            <li>You can delete notes at any time using the "Clear" button.</li>
+            <li>After uninstallation, data remains until Atlassian's retention policies clear it.</li>
         </ul>
 
-        <div class="gdpr-box">
-            <h3>✅ GDPR Compliance</h3>
-            <p>We are committed to compliance with the General Data Protection Regulation (GDPR). As a data processor:
-            </p>
-            <ul>
-                <li>All data processing occurs within Atlassian's EU-compliant infrastructure.</li>
-                <li>You have the right to access, rectify, or delete your data at any time.</li>
-                <li>You can export or clear your notes directly through the app interface.</li>
-            </ul>
-        </div>
-
-        <h2>5. CCPA Compliance</h2>
-        <p>For California residents, under the California Consumer Privacy Act (CCPA):</p>
+        <h2>5. GDPR & CCPA Compliance</h2>
         <ul>
-            <li>We do not sell your personal information.</li>
-            <li>You have the right to know what data we collect (as described above).</li>
-            <li>You have the right to delete your data at any time.</li>
+            <li>All data processing occurs within Atlassian's infrastructure.</li>
+            <li>You have the right to access, modify, or delete your data.</li>
+            <li>We do not sell personal information.</li>
         </ul>
 
-        <h2>6. Third-Party Services</h2>
-        <p>Our app does not integrate with or send data to any third-party services. All functionality is contained
-            within the Atlassian ecosystem.</p>
-
-        <h2>7. Security</h2>
-        <p>Your data security is our priority:</p>
+        <h2>6. Security</h2>
         <ul>
-            <li>All data is stored using Atlassian's Forge Storage API, which provides enterprise-grade security.</li>
-            <li>Data transmission is encrypted using industry-standard TLS.</li>
-            <li>No external servers are involved in data storage or processing.</li>
+            <li>All data transmission uses HTTPS/TLS encryption.</li>
+            <li>Data at rest is encrypted using Atlassian's security standards.</li>
+            <li>No external servers are involved.</li>
         </ul>
         <p>For more details, see our <a href="security.html">Security Policy</a>.</p>
 
-        <h2>8. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. We will notify users of any material changes by updating
-            the "Last Updated" date at the top of this policy.</p>
+        <h2>7. Changes</h2>
+        <p>We may update this policy from time to time. Changes will be reflected in the "Last Updated" date above.</p>
 
         <div class="contact-box">
             <h3>Questions?</h3>
-            <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
-            <a href="mailto:support@technicaldost.com" class="contact-btn">📧 support@technicaldost.com</a>
-            <p style="margin-top: 16px; font-size: 0.9rem; color: var(--text-secondary);">Response Time: Within 24-48
-                hours on business days</p>
+            <p>Contact us about this Privacy Policy.</p>
+            <a href="mailto:support@technicaldost.com" class="btn">support@technicaldost.com</a>
         </div>
     </main>
 
-    <footer class="footer">
+    <footer>
         <div class="footer-links">
             <a href="index.html">Documentation</a>
-            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="privacy-policy.html">Privacy</a>
             <a href="security.html">Security</a>
             <a href="support.html">Support</a>
-            <a href="https://marketplace.atlassian.com/apps/2739337819" target="_blank">Marketplace</a>
         </div>
-        <p class="footer-copyright">© 2025 TechnicalDost. All rights reserved.</p>
+        <span class="footer-copy">© 2025 TechnicalDost</span>
     </footer>
 </body>
 
