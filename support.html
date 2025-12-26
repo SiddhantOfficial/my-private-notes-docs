@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - My Private Notes for Jira</title>
+    <meta name="description"
+        content="Get help with My Private Notes for Jira. Contact our support team for assistance.">
+    <link rel="canonical" href="https://docs.technicaldost.com/support.html">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0052CC;
+            --secondary: #6554C0;
+            --accent: #00B8D9;
+            --success: #36B37E;
+            --text-primary: #172B4D;
+            --text-secondary: #5E6C84;
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F4F5F7;
+            --border: #DFE1E6;
+            --gradient-1: linear-gradient(135deg, #0052CC 0%, #6554C0 100%);
+            --gradient-support: linear-gradient(135deg, #00B8D9 0%, #0052CC 100%);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+        }
+
+        .header {
+            background: var(--gradient-support);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .nav {
+            background: white;
+            box-shadow: var(--shadow-md);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            display: inline-block;
+            padding: 15px 20px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        p,
+        li {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .contact-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 35px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .contact-card .icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .contact-card p {
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: var(--gradient-1);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.05);
+            text-decoration: none;
+        }
+
+        .contact-btn.secondary {
+            background: var(--bg-secondary);
+            color: var(--primary);
+        }
+
+        .response-info {
+            background: linear-gradient(135deg, #E8F5E9 0%, #E3F2FD 100%);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .response-info h3 {
+            color: var(--success);
+            margin-bottom: 10px;
+        }
+
+        .troubleshooting {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .troubleshooting h3 {
+            margin-bottom: 20px;
+        }
+
+        .trouble-item {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .trouble-item h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .trouble-item p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 40px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>💬 Support</h1>
+        <p>We're here to help! Get assistance with My Private Notes for Jira.</p>
+    </header>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html">Documentation</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="security.html">Security</a>
+            <a href="support.html" class="active">Support</a>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="icon">📧</div>
+                <h3>Email Support</h3>
+                <p>Send us an email and we'll get back to you within 24-48 hours on business days.</p>
+                <a href="mailto:support@technicaldost.com" class="contact-btn">support@technicaldost.com</a>
+            </div>
+            <div class="contact-card">
+                <div class="icon">📚</div>
+                <h3>Documentation</h3>
+                <p>Check our documentation for answers to common questions and usage guides.</p>
+                <a href="index.html" class="contact-btn secondary">View Documentation</a>
+            </div>
+        </div>
+
+        <div class="response-info">
+            <h3>⏰ Response Times</h3>
+            <p><strong>Standard Support:</strong> 24-48 hours on business days (Monday-Friday)</p>
+            <p><strong>Security Issues:</strong> Within 24 hours</p>
+        </div>
+
+        <h2>Before Contacting Support</h2>
+        <p>To help us assist you faster, please include the following information in your support request:</p>
+        <ul>
+            <li>Your Jira Cloud instance URL</li>
+            <li>The browser you're using (Chrome, Firefox, Safari, etc.)</li>
+            <li>A description of the issue you're experiencing</li>
+            <li>Steps to reproduce the problem (if applicable)</li>
+            <li>Any error messages you've seen</li>
+            <li>Screenshots (if helpful)</li>
+        </ul>
+
+        <div class="troubleshooting">
+            <h3>🔧 Quick Troubleshooting</h3>
+
+            <div class="trouble-item">
+                <h4>Notes Not Saving?</h4>
+                <p>Try refreshing the Jira issue page. If the problem persists, check your internet connection and try
+                    clearing your browser cache.</p>
+            </div>
+
+            <div class="trouble-item">
+                <h4>Panel Not Appearing?</h4>
+                <p>Make sure the app is properly installed on your Jira instance. Jira administrators can verify this in
+                    the "Manage apps" section.</p>
+            </div>
+
+            <div class="trouble-item">
+                <h4>Error Messages?</h4>
+                <p>Take a screenshot of the error and include it in your support request. This helps us diagnose the
+                    issue quickly.</p>
+            </div>
+        </div>
+
+        <h2>Feature Requests</h2>
+        <p>We love hearing from our users! If you have ideas for new features or improvements, please email us at <a
+                href="mailto:support@technicaldost.com">support@technicaldost.com</a> with the subject line "Feature
+            Request".</p>
+
+        <h2>Security Issues</h2>
+        <p>If you discover a security vulnerability, please report it to <a
+                href="mailto:security@technicaldost.com">security@technicaldost.com</a>. We take security seriously and
+            will respond within 24 hours.</p>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">Documentation</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="security.html">Security</a>
+            <a href="support.html">Support</a>
+            <a href="https://marketplace.atlassian.com/apps/2739337819" target="_blank">Marketplace</a>
+        </div>
+        <p>© 2025 TechnicalDost. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

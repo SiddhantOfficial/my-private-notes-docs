@@ -6,8 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - My Private Notes for Jira</title>
     <meta name="description"
-        content="Privacy Policy for My Private Notes for Jira - Learn how we protect your data and privacy.">
+        content="Privacy Policy for My Private Notes for Jira. Learn how we protect your data and respect your privacy.">
+    <link rel="canonical" href="https://docs.technicaldost.com/privacy-policy.html">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #0052CC;
+            --primary-dark: #0747A6;
+            --secondary: #6554C0;
+            --accent: #00B8D9;
+            --success: #36B37E;
+            --text-primary: #172B4D;
+            --text-secondary: #5E6C84;
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F4F5F7;
+            --border: #DFE1E6;
+            --gradient-1: linear-gradient(135deg, #0052CC 0%, #6554C0 100%);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -15,71 +33,127 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.7;
-            color: #172B4D;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
-            min-height: 100vh;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+        }
+
+        .header {
+            background: var(--gradient-1);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .nav {
+            background: white;
+            box-shadow: var(--shadow-md);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            display: inline-block;
+            padding: 15px 20px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .logo {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        h1 {
-            color: #0052CC;
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-        }
-
-        .last-updated {
-            color: #6b778c;
-            font-size: 0.95rem;
-        }
-
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 35px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            padding: 60px 20px;
         }
 
         h2 {
-            color: #0052CC;
-            margin: 30px 0 15px;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
         }
 
         h2:first-of-type {
             margin-top: 0;
         }
 
-        p {
+        p,
+        li {
+            color: var(--text-secondary);
             margin-bottom: 15px;
         }
 
-        ul {
-            margin: 15px 0 15px 25px;
+        ul,
+        ol {
+            margin-left: 25px;
+            margin-bottom: 20px;
         }
 
         li {
             margin-bottom: 10px;
         }
 
+        .highlight-box {
+            background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 100%);
+            border-left: 4px solid var(--primary);
+            padding: 20px 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .highlight-box strong {
+            color: var(--primary);
+        }
+
+        .gdpr-box {
+            background: linear-gradient(135deg, #E8F5E9 0%, #E3F2FD 100%);
+            border: 1px solid var(--success);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .gdpr-box h3 {
+            color: var(--success);
+            margin-bottom: 15px;
+        }
+
         a {
-            color: #0052CC;
+            color: var(--primary);
             text-decoration: none;
         }
 
@@ -87,147 +161,154 @@
             text-decoration: underline;
         }
 
-        .highlight {
-            background: #E3FCEF;
-            padding: 15px 20px;
-            border-radius: 8px;
-            border-left: 4px solid #00875A;
-            margin: 20px 0;
-        }
-
-        .highlight.warning {
-            background: #FFFAE6;
-            border-left-color: #FF991F;
-        }
-
-        .highlight.info {
-            background: #DEEBFF;
-            border-left-color: #0052CC;
-        }
-
-        footer {
-            text-align: center;
+        .contact-box {
+            background: var(--bg-secondary);
+            border-radius: 12px;
             padding: 30px;
-            color: #6b778c;
-            margin-top: 30px;
+            text-align: center;
+            margin-top: 40px;
         }
 
-        .back-link {
+        .contact-box h3 {
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .contact-btn {
             display: inline-block;
-            margin-bottom: 20px;
-            padding: 8px 16px;
-            background: #f4f5f7;
-            border-radius: 6px;
+            background: var(--gradient-1);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: all 0.3s ease;
         }
 
-        .back-link:hover {
-            background: #ebecf0;
+        .contact-btn:hover {
+            transform: scale(1.05);
             text-decoration: none;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
         }
 
-        th,
-        td {
-            border: 1px solid #dfe1e6;
-            padding: 12px;
-            text-align: left;
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
         }
 
-        th {
-            background-color: #f4f5f7;
-            font-weight: 600;
+        .footer a {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        .last-updated {
+            background: var(--bg-secondary);
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 40px 15px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <a href="index.html" class="back-link">← Back to Documentation</a>
 
-        <header>
-            <div class="logo">🔐</div>
-            <h1>Privacy Policy</h1>
-            <p class="last-updated">Last Updated: December 26, 2025</p>
-        </header>
+    <header class="header">
+        <h1>🔒 Privacy Policy</h1>
+        <p>My Private Notes for Jira</p>
+    </header>
 
-        <div class="card">
-            <p><strong>My Private Notes for Jira</strong> ("we", "our", or "us") is committed to protecting your
-                privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use
-                our Atlassian Marketplace app.</p>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html">Documentation</a>
+            <a href="privacy-policy.html" class="active">Privacy Policy</a>
+            <a href="security.html">Security</a>
+            <a href="support.html">Support</a>
+        </div>
+    </nav>
 
-            <h2>1. Data Collection and Storage</h2>
-            <p>Our app allows you to create private notes associated with Jira issues. Here's what you need to know
-                about your data:</p>
+    <main class="container">
+        <span class="last-updated">Last Updated: December 26, 2025</span>
 
-            <div class="highlight">
-                <strong>✅ Privacy by Design:</strong> All notes are stored securely using Atlassian's hosted storage
-                (Forge Storage API). We do NOT transmit or store your data on any external third-party servers.
-            </div>
+        <p>My Private Notes for Jira ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy
+            explains how we collect, use, and safeguard your information when you use our Atlassian Marketplace app.</p>
 
-            <table>
-                <tr>
-                    <th>Data Type</th>
-                    <th>Description</th>
-                    <th>Storage Location</th>
-                </tr>
-                <tr>
-                    <td>Note Content</td>
-                    <td>The text content of your private notes</td>
-                    <td>Atlassian Forge Storage</td>
-                </tr>
-                <tr>
-                    <td>Atlassian Account ID</td>
-                    <td>Used to ensure only you can access your notes</td>
-                    <td>Atlassian Forge Storage</td>
-                </tr>
-                <tr>
-                    <td>Issue Key</td>
-                    <td>Associates notes with specific Jira issues</td>
-                    <td>Atlassian Forge Storage</td>
-                </tr>
-            </table>
+        <div class="highlight-box">
+            <strong>TL;DR:</strong> Your notes stay completely private. We never access, read, sell, or share your data.
+            Everything is stored securely within Atlassian's infrastructure.
+        </div>
 
-            <h2>2. Data Usage</h2>
-            <p>We use your data <strong>solely</strong> to provide the functionality of the app—specifically, to allow
-                you to save and retrieve your private notes.</p>
+        <h2>1. Data Collection and Storage</h2>
+        <p>Our app allows you to create private notes associated with Jira issues. Here's what you need to know:</p>
+        <ul>
+            <li><strong>Note Content:</strong> The text you write in your private notes.</li>
+            <li><strong>Account Identifier:</strong> Your Atlassian Account ID (used only to associate notes with your
+                account).</li>
+            <li><strong>Issue Context:</strong> The Jira issue key associated with each note.</li>
+        </ul>
+        <p>All data is stored using Atlassian's Forge Storage API within their secure infrastructure. <strong>We do not
+                operate any external servers.</strong></p>
 
-            <div class="highlight info">
-                <strong>We Do NOT:</strong>
-                <ul style="margin-bottom: 0;">
-                    <li>Analyze your note contents</li>
-                    <li>Sell your data to third parties</li>
-                    <li>Share your data with anyone</li>
-                    <li>Use your data for advertising</li>
-                    <li>Transfer data outside the Atlassian ecosystem</li>
-                </ul>
-            </div>
+        <h2>2. Data Usage</h2>
+        <p>We use your data solely to provide the functionality of the app—specifically, to allow you to save and
+            retrieve your private notes.</p>
+        <p><strong>We do NOT:</strong></p>
+        <ul>
+            <li>Analyze your note contents</li>
+            <li>Sell your data to third parties</li>
+            <li>Share your data with anyone</li>
+            <li>Use your data for advertising</li>
+            <li>Transfer data outside the Atlassian ecosystem</li>
+        </ul>
 
-            <h2>3. Data Access and Privacy</h2>
-            <p>Your notes are keyed to your unique Atlassian Account ID. This means:</p>
-            <ul>
-                <li><strong>Only YOU can see your notes</strong> — no one else.</li>
-                <li><strong>Jira Administrators cannot access your notes</strong> — the storage is user-specific.</li>
-                <li><strong>Other users on your Jira instance cannot see your notes</strong> — each user has completely
-                    separate storage.</li>
-                <li><strong>Even we (the app developers) cannot access your notes</strong> — data is encrypted within
-                    Atlassian's infrastructure.</li>
-            </ul>
+        <h2>3. Data Access and Privacy</h2>
+        <p>Your notes are keyed to your unique Atlassian Account ID. This means:</p>
+        <ul>
+            <li><strong>Only YOU can see your notes</strong> — no one else.</li>
+            <li><strong>Jira Administrators cannot access your notes</strong> — the storage is user-specific.</li>
+            <li><strong>Other users on your Jira instance cannot see your notes</strong> — each user has completely
+                separate storage.</li>
+            <li><strong>Even we (the app developers) cannot access your notes</strong> — data is encrypted within
+                Atlassian's infrastructure.</li>
+        </ul>
 
-            <h2>4. Data Retention</h2>
-            <p>Your notes are retained as long as the app is installed on your Jira instance.</p>
-            <ul>
-                <li>If you uninstall the app, your data remains in Atlassian's storage until their standard data
-                    retention policies clear it.</li>
-                <li>You can delete individual notes at any time using the "Clear" button in the app.</li>
-                <li>If you reinstall the app, your previously saved notes will still be available.</li>
-            </ul>
+        <h2>4. Data Retention</h2>
+        <p>Your notes are retained as long as the app is installed on your Jira instance.</p>
+        <ul>
+            <li>If you uninstall the app, your data remains in Atlassian's storage until their standard data retention
+                policies clear it.</li>
+            <li>You can delete individual notes at any time using the "Clear" button in the app.</li>
+            <li>If you reinstall the app, your previously saved notes will still be available.</li>
+        </ul>
 
-            <h2>5. GDPR Compliance</h2>
+        <div class="gdpr-box">
+            <h3>✅ GDPR Compliance</h3>
             <p>We are committed to compliance with the General Data Protection Regulation (GDPR). As a data processor:
             </p>
             <ul>
@@ -235,51 +316,52 @@
                 <li>You have the right to access, rectify, or delete your data at any time.</li>
                 <li>You can export or clear your notes directly through the app interface.</li>
             </ul>
-
-            <h2>6. CCPA Compliance</h2>
-            <p>For California residents, under the California Consumer Privacy Act (CCPA):</p>
-            <ul>
-                <li>We do not sell your personal information.</li>
-                <li>You have the right to know what data we collect (as described above).</li>
-                <li>You have the right to delete your data at any time.</li>
-            </ul>
-
-            <h2>7. Third-Party Services</h2>
-            <p>Our app does not integrate with or send data to any third-party services. All functionality is contained
-                within the Atlassian ecosystem.</p>
-
-            <h2>8. Security</h2>
-            <p>Your data security is our priority:</p>
-            <ul>
-                <li>All data is stored using Atlassian's Forge Storage API, which provides enterprise-grade security.
-                </li>
-                <li>Data transmission is encrypted using industry-standard TLS.</li>
-                <li>No external servers are involved in data storage or processing.</li>
-            </ul>
-            <p>For more details, see our <a href="security.html">Security Policy</a>.</p>
-
-            <h2>9. Changes to This Policy</h2>
-            <p>We may update this Privacy Policy from time to time. We will notify users of any material changes by
-                updating the "Last Updated" date at the top of this policy.</p>
-
-            <h2>10. Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
-            <ul>
-                <li><strong>Email:</strong> <a href="mailto:support@technicaldost.com">support@technicaldost.com</a>
-                </li>
-                <li><strong>Response Time:</strong> Within 24-48 hours on business days</li>
-            </ul>
         </div>
 
-        <footer>
-            <p>&copy; 2025 TechnicalDost. All rights reserved.</p>
-            <p style="margin-top: 10px;">
-                <a href="index.html">Documentation</a> |
-                <a href="security.html">Security</a> |
-                <a href="https://marketplace.atlassian.com/apps/2739337819" target="_blank">Marketplace</a>
-            </p>
-        </footer>
-    </div>
+        <h2>6. CCPA Compliance</h2>
+        <p>For California residents, under the California Consumer Privacy Act (CCPA):</p>
+        <ul>
+            <li>We do not sell your personal information.</li>
+            <li>You have the right to know what data we collect (as described above).</li>
+            <li>You have the right to delete your data at any time.</li>
+        </ul>
+
+        <h2>7. Third-Party Services</h2>
+        <p>Our app does not integrate with or send data to any third-party services. All functionality is contained
+            within the Atlassian ecosystem.</p>
+
+        <h2>8. Security</h2>
+        <p>Your data security is our priority:</p>
+        <ul>
+            <li>All data is stored using Atlassian's Forge Storage API, which provides enterprise-grade security.</li>
+            <li>Data transmission is encrypted using industry-standard TLS.</li>
+            <li>No external servers are involved in data storage or processing.</li>
+        </ul>
+        <p>For more details, see our <a href="security.html">Security Policy</a>.</p>
+
+        <h2>9. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify users of any material changes by updating
+            the "Last Updated" date at the top of this policy.</p>
+
+        <div class="contact-box">
+            <h3>Questions?</h3>
+            <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
+            <a href="mailto:support@technicaldost.com" class="contact-btn">support@technicaldost.com</a>
+            <p style="margin-top: 15px; font-size: 0.9rem;">Response Time: Within 24-48 hours on business days</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">Documentation</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="security.html">Security</a>
+            <a href="support.html">Support</a>
+            <a href="https://marketplace.atlassian.com/apps/2739337819" target="_blank">Marketplace</a>
+        </div>
+        <p>© 2025 TechnicalDost. All rights reserved.</p>
+    </footer>
+
 </body>
 
 </html>
