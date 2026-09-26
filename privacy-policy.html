@@ -290,7 +290,7 @@
     </section>
 
     <main>
-        <span class="updated">Last Updated: December 26, 2025</span>
+        <span class="updated">Last Updated: September 27, 2026</span>
 
         <div class="highlight">
             <p><strong>TL;DR:</strong> Your notes stay completely private. We never access, read, sell, or share your
@@ -303,7 +303,7 @@
             <li><strong>Note Content:</strong> The text you write in your private notes.</li>
             <li><strong>Account Identifier:</strong> Your Atlassian Account ID (to associate notes with your account).
             </li>
-            <li><strong>Issue Identifier:</strong> The Jira issue key for each note.</li>
+            <li><strong>Issue Identifier:</strong> The internal Jira issue ID for each note.</li>
         </ul>
         <p>All data is stored using Atlassian's Forge Storage API. <strong>We do not operate any external
                 servers.</strong></p>
@@ -330,7 +330,8 @@
         <h2>4. Data Retention</h2>
         <ul>
             <li>Notes are retained as long as the app is installed.</li>
-            <li>You can delete notes at any time using the "Clear" button.</li>
+            <li>You can delete notes at any time using the "Clear" button. Emptying a note also deletes it.</li>
+            <li>Every week the app checks your Account ID with Atlassian's personal data reporting API. If your Atlassian account has been closed, all of your notes are deleted automatically.</li>
             <li>After uninstallation, data remains until Atlassian's retention policies clear it.</li>
         </ul>
 
