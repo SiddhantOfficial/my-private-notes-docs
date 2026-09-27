@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Security – Recurring Tasks for Jira</title><meta name="description" content="Security overview for Recurring Tasks & Issue Scheduler for Jira.">
+<link rel="canonical" href="https://docs.technicaldost.com/recurring-tasks/security.html"><link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>*{margin:0;padding:0;box-sizing:border-box}
+:root{--blue:#0052CC;--blue-d:#0747A6;--bg:#f9fafb;--card:#fff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb;--note:#E9F2FF}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.nav{max-width:960px;margin:0 auto;padding:14px 16px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--text);text-decoration:none}
+.brand img{width:28px;height:28px;border-radius:6px}
+.nav a.l{color:var(--muted);text-decoration:none;font-weight:500;font-size:15px}
+.nav a.l:hover,.nav a.on{color:var(--blue)}
+main{max-width:960px;margin:0 auto;padding:40px 16px 64px}
+h1{font-size:34px;line-height:1.2;margin-bottom:8px}
+h2{font-size:22px;margin:36px 0 12px}
+h3{font-size:17px;margin:22px 0 8px}
+p,li{font-size:16px}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 14px 22px}
+li{margin:4px 0}
+.sub{color:var(--muted);margin-bottom:24px}
+.tldr{background:var(--note);border-left:4px solid var(--blue);padding:14px 16px;border-radius:6px;margin:20px 0}
+table{width:100%;border-collapse:collapse;margin:10px 0 18px;background:var(--card);font-size:15px}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f3f4f6}
+code{background:#f3f4f6;padding:1px 5px;border-radius:4px;font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;margin:16px 0}
+a{color:var(--blue)}
+.hero{display:flex;gap:18px;align-items:center;margin-bottom:10px}
+.hero img{width:64px;height:64px;border-radius:12px}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:14px;text-align:center;padding:24px 16px}
+@media (max-width:600px){h1{font-size:27px}.hero{flex-direction:column;align-items:flex-start}}</style></head><body>
+<header><div class="nav"><a class="brand" href="index.html"><img src="logo.png" alt="">Recurring Tasks</a><a class="l" href="index.html">Documentation</a><a class="l" href="privacy.html">Privacy</a><a class="l on" href="security.html">Security</a><a class="l" href="support.html">Support</a></div></header>
+<main><h1>Security</h1><p class="sub">How Recurring Tasks &amp; Issue Scheduler protects your Jira data</p>
+<div class="tldr"><b>Runs on Atlassian:</b> no data egress. Hosting, compute and storage are provided by Atlassian Forge, and we operate no servers.</div>
+<h2>Architecture</h2><ul><li>Forge app (UI Kit front end, Forge functions back end, Forge Custom Entity Store).</li><li>Background work is one hourly scheduled trigger plus a weekly personal-data report.</li><li>No external domains are allowed in the manifest (no fetch or egress permissions).</li></ul>
+<h2>Permissions (OAuth scopes)</h2><table><tr><th>Scope</th><th>Why</th></tr>
+<tr><td><code>read:jira-work</code>, <code>write:jira-work</code></td><td>Read project metadata and create the scheduled issues and sub-tasks</td></tr>
+<tr><td><code>read:jira-user</code></td><td>User picker for a fixed assignee</td></tr>
+<tr><td><code>read:project:jira</code>, <code>read:board-scope:jira-software</code>, <code>read:sprint:jira-software</code>, <code>write:sprint:jira-software</code></td><td>Only for the optional "Add to active sprint"</td></tr>
+<tr><td><code>storage:app</code></td><td>Store schedules and run history in Forge storage</td></tr>
+<tr><td><code>report:personal-data</code></td><td>GDPR reporting of stored account IDs</td></tr></table>
+<h2>Access control</h2><ul><li>Creating a schedule requires the user's own <b>Create issues</b> permission in the target project. This is checked as the user on every save and every manual run.</li>
+<li>Only the owner or a project admin can change, run or delete a schedule. The global list shows only your own schedules unless you are a Jira admin.</li>
+<li>Lookups in the editor (projects, issue types, users, issues) run as the signed-in user, so the app never reveals data the user cannot already see.</li></ul>
+<h2>Data protection</h2><ul><li>Encrypted at rest and in transit by Atlassian Forge, with data residency supported.</li><li>Minimal personal data (account IDs only), with 90-day history expiry.</li></ul>
+<h2>Reporting a vulnerability</h2><p>Email <a href="mailto:support@technicaldost.com">support@technicaldost.com</a> with "SECURITY" in the subject. We acknowledge within 2 business days and fix critical issues as a priority. We also follow Atlassian's security requirements for Marketplace partners.</p></main>
+<footer>© 2026 Siddhant Sharma · Recurring Tasks &amp; Issue Scheduler for Jira · <a href="mailto:support@technicaldost.com">support@technicaldost.com</a></footer>
+</body></html>
